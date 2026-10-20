@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basic Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h2>Calculator</h2>
+
+        <!-- Display Screen -->
+        <div class="display">
+            <div id="previous"></div>
+            <input
+                type="text"
+                id="screen"
+                value="0"
+                readonly
+                aria-label="Calculator display"
+            >
+        </div>
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+
+            <button class="special" onclick="clearScreen()">C</button>
+            <button class="special" onclick="deleteLast()">⌫</button>
+            <button class="operator" onclick="chooseOperator('%')">%</button>
+            <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+            <button onclick="inputNumber('7')">7</button>
+            <button onclick="inputNumber('8')">8</button>
+            <button onclick="inputNumber('9')">9</button>
+            <button class="operator" onclick="chooseOperator('*')">×</button>
+
+            <button onclick="inputNumber('4')">4</button>
+            <button onclick="inputNumber('5')">5</button>
+            <button onclick="inputNumber('6')">6</button>
+            <button class="operator" onclick="chooseOperator('-')">−</button>
+
+            <button onclick="inputNumber('1')">1</button>
+            <button onclick="inputNumber('2')">2</button>
+            <button onclick="inputNumber('3')">3</button>
+            <button class="operator" onclick="chooseOperator('+')">+</button>
+
+            <button onclick="inputNumber('0')">0</button>
+            <button onclick="inputDecimal()">.</button>
+            <button class="special" onclick="toggleSign()">±</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+        </div>
+
+        <p class="hint">Keyboard supported</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
